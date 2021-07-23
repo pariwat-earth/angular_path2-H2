@@ -1,0 +1,27 @@
+<div class="contaner">
+
+  <p>My Task today</p>
+
+  <app-task *ngFor="let tasks of task" [taskObj]="tasks"
+  (deleteTask)="deletetask($event)" (taskClick)="selectedTask($event)"></app-task>
+
+  <div class="new-task">
+    <p>Add Task </p>
+
+    <div>
+      Name: <input class="thummo" type="text" [(ngModel)]="taskName">
+    </div>
+
+    <div>
+      Descripton: <input class="thummo" type="text" [(ngModel)]="taskDescription">
+    </div>
+
+    <button class="inputtho" (click)="addTask()">Add</button>
+  </div>
+
+   <div class="task-detail" *ngIf="taskSelect"> <!-- ถ้าถูกคลิกจึงจะแสดง -->
+    <h4>Task: {{taskSelect.name}}</h4>
+    <b>Desciption:</b> {{taskSelect.description}}
+  </div>
+
+</div>

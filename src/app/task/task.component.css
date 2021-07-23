@@ -1,0 +1,20 @@
+.contaner{
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.selected{
+  background-color: lightslategray;
+}
+.bot{
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border: 0px;
+}
+.bot:hover{
+  background: white;
+  color: red;
+  border: 1px solid red;
+}
